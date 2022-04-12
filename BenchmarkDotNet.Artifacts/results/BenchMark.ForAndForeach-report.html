@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchMark.ForAndForeach-20220412-175200</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.631 (20H2/October2020Update)
+11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.204
+  [Host]                   : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+  String Benchmark Job 5.0 : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+</code></pre>
+<pre><code>Job=String Benchmark Job 5.0  Runtime=.NET 5.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Min</th><th>Max</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ForMeth</td><td>0.7183 ns</td><td>0.0824 ns</td><td>0.1444 ns</td><td>0.3524 ns</td><td>1.003 ns</td><td>0.7504 ns</td><td>1.00</td><td>0.00</td><td>-</td>
+</tr><tr><td>ForeachMeth</td><td>8.1580 ns</td><td>0.1850 ns</td><td>0.1545 ns</td><td>7.7892 ns</td><td>8.357 ns</td><td>8.1678 ns</td><td>13.08</td><td>3.83</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
